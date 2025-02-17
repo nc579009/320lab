@@ -16,6 +16,10 @@ function ToDoList() {
 
   }
 
+  function editTask(index){
+
+  }
+
 
 
 
@@ -36,6 +40,24 @@ function ToDoList() {
           Add Task
           </button>
     </div>
+
+    <ol>
+      {tasks.map((task,inde)=>
+      <li key= {index}>
+        <span className="text"></span>
+        <button 
+          className="delete-button" 
+          onClick={() => deleteTask(index)}>
+          Delete
+        </button>
+        <button 
+          className="edit-button" 
+          onClick={() => editTask(index)}>
+          Edit
+        </button>
+      </li>
+      )}
+    </ol>
      </div>)
 }
 
